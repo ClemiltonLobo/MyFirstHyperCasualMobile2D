@@ -18,7 +18,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 _pos;
     private bool _canRun;
 
-    
+    private void Start()
+    {
+        _canRun = true;
+    }
+
     void Update()
     {
         if(!_canRun) return;
