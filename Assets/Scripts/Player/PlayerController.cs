@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Core.Singleton;
 using TMPro;
+using DG.Tweening;
 
 public class PlayerController : Singleton<PlayerController>
 {
@@ -18,12 +19,13 @@ public class PlayerController : Singleton<PlayerController>
     [Header("text")]
     public TextMeshPro uiTextPowerUp;
 
+    public bool invecible = true;
 
     //privates
     private Vector3 _pos;
     private bool _canRun;
     private float _currentSpeed;
-    public bool invecible = true;
+    private Vector3 _startPosition;
 
     /*private void Start()
     {
@@ -32,6 +34,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Start()
     {
+        _startPosition = transform.position;
         ResetSpeed();
     }
 
@@ -91,6 +94,21 @@ public class PlayerController : Singleton<PlayerController>
     public void ResetSpeed()
     {
         _currentSpeed = speed;
+    }
+
+    public void ChangeFly(float amount, float duration, float animationDuration, Ease ease)
+    {
+        /*var p = transform.position;
+        p.y = _startPosition.y + amount;
+        transform.position = p;*/
+
+        transform.DOMoveY(_startPosition.y + amount, animationDuration).SetEase(ease);//.onComplete(ResetFly);
+        Invoke(nameof(ResetFly), duration);
+    }
+
+    public void ResetFly()
+    {
+        transform.DOMoveY(_startPosition.y, -1f);
     }
     #endregion
 }
