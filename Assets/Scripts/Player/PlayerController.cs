@@ -21,6 +21,9 @@ public class PlayerController : Singleton<PlayerController>
 
     public bool invecible = true;
 
+    [Header("text")]
+    public GameObject CoinCollector;
+
     //privates
     private Vector3 _pos;
     private bool _canRun;
@@ -109,6 +112,11 @@ public class PlayerController : Singleton<PlayerController>
     public void ResetFly()
     {
         transform.DOMoveY(_startPosition.y, -1f);
+    }
+
+    public void changeCoinCollectorSize(float amount)
+    {
+        CoinCollector.transform.localScale = Vector3.one * amount;
     }
     #endregion
 }
