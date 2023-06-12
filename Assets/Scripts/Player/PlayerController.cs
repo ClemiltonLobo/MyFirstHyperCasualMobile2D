@@ -16,13 +16,16 @@ public class PlayerController : Singleton<PlayerController>
     public string tagToCheckEndLine = "EndLine";
     public GameObject endScreen;
 
-    [Header("text")]
+    [Header("Names PowerUps")]
     public TextMeshPro uiTextPowerUp;
 
     public bool invecible = true;
 
-    [Header("text")]
+    [Header("Coin Setup")]
     public GameObject CoinCollector;
+
+    [Header("Animation")]
+    public AnimatorManager animatorManager;
 
     //privates
     private Vector3 _pos;
@@ -56,7 +59,11 @@ public class PlayerController : Singleton<PlayerController>
     {
         if(collision.transform.tag == tagToCheckEnemy)
         {
-            if(!invecible) EndGame();
+            if (!invecible)
+            {
+                MoveBack(collision.transform);
+                EndGame(AnimatorManager.AnimationType.DEAD);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -67,15 +74,22 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void EndGame()
+    void MoveBack(Transform t)
+    {
+        t.DOMoveZ(1f, -1f).SetRelative();
+    }
+
+    private void EndGame(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE)
     {
         _canRun = false;
         endScreen.SetActive(true);
+        animatorManager.Play(animationType);
     }
 
     public void StartToRun()
     {
         _canRun=true;
+        animatorManager.Play(AnimatorManager.AnimationType.RUN);
     }
 
     #region PowerUps
