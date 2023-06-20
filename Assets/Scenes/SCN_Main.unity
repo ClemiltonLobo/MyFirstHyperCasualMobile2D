@@ -1799,6 +1799,18 @@ MonoBehaviour:
   - {fileID: 3646250762627165242, guid: f8021c6c62190db4ea8b28a9444e24cb, type: 3}
   - {fileID: 3646250762627165242, guid: b586849ad2007c344abf1b373095adfa, type: 3}
   - {fileID: 3646250762627165242, guid: c144eb3334c7344478c59a76fa8fdcc0, type: 3}
+  levelsPiecesStart:
+  - {fileID: 8872684597773095182, guid: f1592c5736e27b04d8941131c5ad1b87, type: 3}
+  levelsPieces:
+  - {fileID: 8872684597773095182, guid: 5b8d5a17b3194d444b235ff548ddd5da, type: 3}
+  - {fileID: 8444003983123474021, guid: c603d956c3edde847822a5e5bfde70da, type: 3}
+  - {fileID: 8444003983123474021, guid: c603d956c3edde847822a5e5bfde70da, type: 3}
+  levelsPiecesEnd:
+  - {fileID: 8872684597773095182, guid: f8ea52bf903a37340a43c6ca496430ad, type: 3}
+  pieceStartNumber: 3
+  pieceNumber: 5
+  pieceEndNumber: 1
+  timeBetweenPieces: 0.3
   _index: 1
 --- !u!4 &1196806117
 Transform:
