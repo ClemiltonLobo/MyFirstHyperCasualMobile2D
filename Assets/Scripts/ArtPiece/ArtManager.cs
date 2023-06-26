@@ -17,7 +17,15 @@ public class ArtManager : Singleton<ArtManager>
 
     public artSetup GetSetupByType(ArtType artType)
     {
-        return artSetups.Find(i => i.artType == artType);
+        artSetup setup = artSetups.Find(i => i.artType == artType);
+        if (setup == null)
+        {
+            Debug.LogWarning("No artSetup found for ArtType: " + artType);
+            // Aqui você pode retornar null ou um valor padrão adequado
+            // ou tomar qualquer outra ação necessária.
+        }
+        return setup;
+        //return artSetups.Find(i => i.artType == artType);
     }
 }
 
