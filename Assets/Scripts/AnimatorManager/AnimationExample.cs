@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimationExample : MonoBehaviour
 {
-    public Animation animation;
+    public new Animation animation;
 
     public AnimationClip run;
     public AnimationClip idle;
