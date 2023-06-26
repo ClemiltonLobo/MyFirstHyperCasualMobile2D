@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4712282429477892302}
   - component: {fileID: 8513374465176025288}
   - component: {fileID: 5612656442628763651}
+  - component: {fileID: 8023840811358671018}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -106,6 +107,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8023840811358671018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020684584867394071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4e77dca6ef401419bbf8e25d146f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 8513374465176025288}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2512825419303617839
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +133,7 @@ GameObject:
   - component: {fileID: 1868360170364917216}
   - component: {fileID: 6006290644711888317}
   - component: {fileID: 3722517828648923262}
+  - component: {fileID: 342553197920775785}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -189,6 +206,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &342553197920775785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512825419303617839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4e77dca6ef401419bbf8e25d146f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 3722517828648923262}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2758251076345671160
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +381,7 @@ GameObject:
   - component: {fileID: 5931225093747986534}
   - component: {fileID: 7885872937662664814}
   - component: {fileID: 8418242639040273800}
+  - component: {fileID: 2157996204368711639}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -421,6 +454,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2157996204368711639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635832566115789182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4e77dca6ef401419bbf8e25d146f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 8418242639040273800}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8749180751736493674
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +480,7 @@ GameObject:
   - component: {fileID: 3932625008411938908}
   - component: {fileID: 6220267604436425672}
   - component: {fileID: 2819043082499916016}
+  - component: {fileID: 2014934218647972755}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -504,6 +553,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2014934218647972755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749180751736493674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4e77dca6ef401419bbf8e25d146f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 2819043082499916016}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &819039221365025662
 PrefabInstance:
   m_ObjectHideFlags: 0
