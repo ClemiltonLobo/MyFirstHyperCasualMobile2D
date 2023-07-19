@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemCollactableBase : MonoBehaviour
 {
     public string compareTag = "Player";
-    public ParticleSystem ParticleSystem;
+    public new ParticleSystem particleSystem;
     public float timeToHide = 3;
     public GameObject graphicItens;
 
@@ -44,8 +42,13 @@ public class ItemCollactableBase : MonoBehaviour
 
     protected virtual void OnCollect()
     {
-        if (ParticleSystem != null) ParticleSystem.Play();
+        if (particleSystem != null)
+        {
+            particleSystem.transform.SetParent(null);
+            particleSystem.Play();
+        }
+
         if (audioSource != null) audioSource.Play();
     }
-    
+
 }
